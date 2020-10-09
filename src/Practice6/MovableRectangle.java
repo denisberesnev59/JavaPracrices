@@ -1,43 +1,33 @@
 package Practice6;
 
-public class MovableRectangle extends Rectangle implements Movable{
-    private final MovablePoints topLeft;
-    private final MovablePoints bottomRight;
+public class MovableRectangle implements Movable{
+    int x, y;
+    int x_speed, y_speed;
 
-    public MovableRectangle(int x1, int y1, int x2, int y2, int xSpeed, int ySpeed) {
-        this.topLeft = new MovablePoints(x1, y1, xSpeed, ySpeed);
-        this.bottomRight = new MovablePoints(x2, y2, xSpeed, ySpeed);
+    MovableRectangle(int x, int y, int x_speed, int y_speed){
+        this.x = x;
+        this.y = y;
+        this.x_speed = x_speed;
+        this.y_speed = y_speed;
     }
 
     @Override
     public void moveUp() {
-        topLeft.moveUp();
-        bottomRight.moveUp();
+        System.out.println("Coordinates: ("+ x +"; "+(y + y_speed)+")");
     }
 
     @Override
     public void moveDown() {
-        topLeft.moveDown();
-        bottomRight.moveDown();
+        System.out.println("Coordinates: ("+ x +"; "+(y - y_speed)+")");
     }
 
     @Override
     public void moveLeft() {
-        topLeft.moveLeft();
-        bottomRight.moveLeft();
+        System.out.println("Coordinates: ("+ (x - x_speed) +"; "+ y +")");
     }
 
     @Override
     public void moveRight() {
-        topLeft.moveRight();
-        bottomRight.moveLeft();
-    }
-
-    @Override
-    public String toString() {
-        return "MovableRectangle{" +
-                "topLeft=" + topLeft +
-                ", bottomRight=" + bottomRight +
-                '}';
+        System.out.println("Coordinates: ("+ (x + x_speed) +"; "+ y +")");
     }
 }

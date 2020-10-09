@@ -1,0 +1,25 @@
+plugins {
+    id 'java' // Для поддержки старого кода
+    id 'application' // Для запуска JavaFX
+    id 'org.openjfx.javafxplugin' version '0.0.8' // Зависимость на JavaFX
+}
+
+group 'oru.capchik' // Базовый package вашего проекта
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral() // Откуда будут браться зависимости
+}
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src'] // Указание папки с исходными файлами
+        }
+    }
+}
+
+javafx {
+    version = "14"
+    modules = [ 'javafx.controls' ] // Какие модули берутся из зависимости
+}
+mainClassName='ru.capchik.ivbo_02_19.lesson5.Main' // Указать название файла, который будет запускаться
