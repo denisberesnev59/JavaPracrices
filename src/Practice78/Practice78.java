@@ -45,16 +45,7 @@ public class Practice78 {
         company.hireAll(topManagerList);
 
         List<Employee> topSalary=company.getTopSalaryStaff(10);
-        for(Employee obj: topSalary)
-        {
-            System.out.printf("%d Руб.\n",(int)obj.calcSalary());
-        }
-
         List<Employee> lowerSalary=company.getLowestSalaryStaff(30);
-        for(Employee obj: lowerSalary)
-        {
-            System.out.printf("%d Руб.\n",(int)obj.calcSalary());
-        }
     }
 }
 
@@ -202,10 +193,6 @@ class Company {
 
         return income;
     }
-
-
-
-
 
     public List<Employee> getTopSalaryStaff(int count) {
         if (count > 0 && count < employees.size()) {
