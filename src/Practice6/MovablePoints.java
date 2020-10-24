@@ -1,6 +1,6 @@
 package Practice6;
 
-public class MovablePoints  implements Movable
+public class MovablePoints implements Movable
 {
     int flag=0;
 

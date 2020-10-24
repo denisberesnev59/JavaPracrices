@@ -1,6 +1,6 @@
 package Practice6;
 
-public class MovableRectangle implements Movable{
+public class MovableRectangle extends Rectangle implements Movable{
     int x, y;
     int x_speed, y_speed;
 
